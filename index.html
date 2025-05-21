@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles/portfolio.css">
     <link rel="stylesheet" href="styles/why-choose-us.css">
     <link rel="stylesheet" href="styles/development-process.css">
+    <link rel="stylesheet" href="styles/cta-section.css">
+    <link rel="stylesheet" href="styles/contact-section.css">
+    <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/override.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -16,13 +19,12 @@
             <div class="logo">
                 <a href="#"><img src="assets/Logotipo-branco.png" alt="WebCreative"></a>
             </div>
-            <nav>
-                <ul>
+            <nav>                <ul>
                     <li><a href="#">Início</a></li>
                     <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Preços</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#why-choose-us">Por que nos escolher</a></li>
+                    <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
             <div class="menu-toggle">
@@ -268,22 +270,170 @@
                         <div class="timeline-number">07</div>
                         <h3>Lançamento</h3>
                         <p>Após sua aprovação final, publicamos seu site e configuramos ferramentas de análise para acompanhar o desempenho. Seu projeto fica online e pronto para atrair clientes e converter visitantes.</p>
+                    </div>                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção CTA -->
+    <section id="cta" class="cta-section">
+        <div class="cta-background-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="cta-title">Pronto para <span>transformar</span> sua presença digital?</h2>
+                    <p class="cta-description">Garanta um site que converte visitantes em clientes. Nossa equipe está pronta para transformar suas ideias em resultados.</p>
+                      
+                    
+                    <p class="cta-offer"><strong>Oferta exclusiva:</strong> <span style="color:#ffc107;">30% de desconto</span> para os próximos 5 clientes.</p>
+                    
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary cta-main-btn">QUERO MEU SITE COM DESCONTO</a>
+                       
                     </div>
+                </div>
+            </div>
+        </div>    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="contact-section py-5">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="section-title">Fale <span>Conosco</span></h2>
+                    <p class="section-description">Estamos prontos para transformar sua ideia em realidade. Envie sua mensagem!</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <div class="contact-info-card">
+                        <h3>Informações de Contato</h3>
+                        <p>Preencha o formulário e entraremos em contato o mais breve possível, ou utilize um dos nossos canais de atendimento direto:</p>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-text">
+                                <h4>Endereço</h4>
+                                <p>Rua Escoteiro Iter de Souza, 131, Parque Ipiranga, Resende-RJ, 27516-160</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div class="contact-text">
+                                <h4>Telefone</h4>
+                                <p>(24) 99202-8552</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>atendimento@2go.marketing</p>
+                            </div>
+                        </div>
+                        
+                        <div class="social-links-contact">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <form class="contact-form">
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Nome completo *" required>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Email *" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <input type="tel" class="form-control" id="phone" placeholder="Telefone">
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <div class="form-group">
+                                    <select class="form-control" id="subject">
+                                        <option value="" disabled selected>Assunto</option>
+                                        <option value="Landing Page">Landing Page</option>
+                                        <option value="E-commerce">E-commerce</option>
+                                        <option value="Site Institucional">Site Institucional</option>
+                                        <option value="Blog">Blog</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group mb-4">
+                            <textarea class="form-control" id="message" rows="5" placeholder="Sua mensagem *" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary submit-btn">ENVIAR MENSAGEM</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
+    
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>    <script src="script/nav.js"></script>
     <script src="script/portfolio.js"></script>
     <script src="script/typing-effect.js"></script>
     <script src="script/parallax-effect.js"></script>
     <script src="script/timeline-parallax.js"></script>
-    
-    <!-- Botão WhatsApp Flutuante -->
-    <a href="https://wa.me/5500000000000?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20criação%20de%20sites." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <script src="script/cta-section.js"></script>      <!-- Botão WhatsApp Flutuante -->
+    <a href="https://wa.me/552499202855?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20criação%20de%20sites." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-text">Fale conosco</span>
     </a>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">                <div class="col-md-4">
+                    <h4>2GO Marketing</h4>
+                    <p>Soluções digitais que transformam sua presença online e impulsionam o seu negócio no mundo digital.</p>
+                </div><div class="col-md-4">
+                    <h4>Links Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Início</a></li>                        <li><a href="#portfolio">Portfólio</a></li>
+                        <li><a href="#why-choose-us">Por que nos escolher</a></li>
+                        <li><a href="#development-process">Processo de desenvolvimento</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>                <div class="col-md-4">
+                    <h4>Contato</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Escoteiro Iter de Souza, 131, Parque Ipiranga, Resende-RJ, 27516-160</li>
+                        <li><i class="fas fa-phone"></i> (24) 99202-8552</li>
+                        <li><i class="fas fa-envelope"></i> atendimento@2go.marketing</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">                <div class="col-md-12 text-center">
+                    <p class="copyright-text">© 2025 2GO Marketing. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

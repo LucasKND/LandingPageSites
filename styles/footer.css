@@ -1,0 +1,155 @@
+
+.site-footer {
+    background-color: #111111;
+    padding: 60px 0 20px;
+    color: #ffffff;
+    position: relative;
+    z-index: 1;
+}
+
+.site-footer h4 {
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.site-footer p {
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-links {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #b3b3b3;
+    text-decoration: none;
+    transition: all 0.25s ease-in-out;
+    font-size: 0.9rem;
+    display: inline-block;
+    position: relative;
+    padding-left: 2px;
+}
+
+.footer-links a:hover {
+    color: #E63946;
+    transform: translateX(3px);
+}
+
+.contact-info {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.contact-info li {
+    margin-bottom: 16px;
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: flex-start;
+    line-height: 1.5;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #E63946;
+    width: 16px;
+    text-align: center;
+    margin-top: 3px;
+    flex-shrink: 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: #E63946;
+    transform: translateY(-3px);
+}
+
+hr {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+}
+
+.copyright-text {
+    color: #777777;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+/* Efeito nos links do footer */
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background-color: #E63946;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+/* Efeito de hover nas colunas - suavizado */
+.site-footer .col-md-4 {
+    transition: transform 0.4s ease-out;
+}
+
+.site-footer .col-md-4:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsividade */
+@media (max-width: 767px) {
+    .site-footer {
+        padding: 40px 0 20px;
+        text-align: center;
+    }
+    
+    .site-footer h4 {
+        margin-top: 25px;
+        margin-bottom: 15px;
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .contact-info li {
+        justify-content: center;
+    }
+    
+    .footer-links {
+        margin-bottom: 20px;
+    }
+}
