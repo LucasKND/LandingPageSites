@@ -1,0 +1,15 @@
+/* Sobrescrever estilos Bootstrap e outros estilos padrão - apenas para o botão primário */
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-primary.active,
+.btn-primary.active:focus,
+.btn-primary.focus {    outline: 0 !important;
+    outline-offset: 0 !important;
+    box-shadow: none !important;
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    border: none !important;
+}
