@@ -1,0 +1,308 @@
+/* Estilos da seção Desenvolvimento/Processo */
+.development-process {
+    padding: 80px 0;
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.development-process::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #121212, #E63946);
+}
+
+.development-process .section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.development-process .section-title span {
+    color: #E63946;
+}
+
+.development-process .section-description {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #666;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    perspective: 1000px; /* Adiciona perspectiva para efeito 3D */
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    background-color: #dddddd; /* Linha mais clara para contraste com a linha de loading */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0; /* Base na camada do meio */
+}
+
+/* Nova linha de loading que se preenche com o scroll - versão aprimorada */
+.timeline-loading-line {
+    content: '';
+    position: absolute;
+    width: 8px; /* Agora mais grossa para destacar sem as bolinhas */
+    background: linear-gradient(to bottom, #E63946, #ff657b, #ff8a98); /* Gradiente mais rico */
+    top: 0;
+    height: 0%; /* Começa com 0% e aumenta com o scroll */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(230, 57, 70, 0.8); /* Brilho aumentado */
+    transition: height 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* Transição com efeito bounce */
+    animation: pulseGlow 2s infinite alternate; /* Adiciona pulsação */
+}
+
+.timeline-container {
+    padding: 15px 30px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+    box-sizing: border-box;
+    margin-bottom: 40px; /* Aumentado para dar mais espaço entre os itens */
+    opacity: 0; /* Começa invisível e aparece com o scroll */
+    transform: translateY(50px); /* Começa deslocado para criar efeito de entrada */
+    transition: all 0.5s ease; /* Suaviza as animações */
+    will-change: transform, opacity; /* Otimiza as animações */
+}
+
+/* Garante que os containers sejam visíveis quando no viewport */
+.timeline-container.active {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.timeline-container.left {
+    left: 0;
+    padding-right: 50px;
+}
+
+.timeline-container.right {
+    left: 50%;
+    padding-left: 50px;
+}
+
+/* Bolinhas removidas */
+
+/* Animação quando o item estiver no viewport */
+
+.timeline-content {
+    padding: 25px 30px;
+    background-color: #FFFFFF;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #E63946;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform-style: preserve-3d; /* Para efeitos 3D */
+    transform: translateZ(0); /* Inicia o elemento no plano z=0 */
+    backface-visibility: hidden; /* Evita problemas visuais nas transformações */
+}
+
+.timeline-container.right .timeline-content {
+    border-left: 0;
+    border-right: 4px solid #E63946;
+}
+
+/* Efeito base hover para os cards da timeline */
+.timeline-content:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background-color: #E63946;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.timeline-icon i {
+    font-size: 24px;
+    color: #FFFFFF;
+}
+
+.timeline-icon::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 70%);
+    opacity: 0;
+    z-index: 0;
+}
+
+.timeline-container.active .timeline-icon {
+    box-shadow: 0 0 15px rgba(230, 57, 70, 0.6);
+}
+
+.timeline-content h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #121212;
+    letter-spacing: 1px;
+}
+
+.timeline-content p {
+    line-height: 1.6;
+    margin-bottom: 0;
+    color: #555;
+}
+
+.timeline-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    line-height: 1;
+    color: rgba(230, 57, 70, 0.2);
+    z-index: 0;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Animação de pulsação para a linha de loading */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 15px rgba(230, 57, 70, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 25px rgba(230, 57, 70, 0.9);
+    }
+}
+
+/* Animação de brilho para os cards ativados pelo scroll */
+@keyframes cardGlow {
+    0% { box-shadow: 0 10px 20px rgba(230, 57, 70, 0.1); }
+    50% { box-shadow: 0 15px 30px rgba(230, 57, 70, 0.3); }
+    100% { box-shadow: 0 10px 20px rgba(230, 57, 70, 0.1); }
+}
+
+/* Estilo para elementos ativos na timeline */
+.timeline-container.active .timeline-content {
+    transform: translateZ(30px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.timeline-container.active .timeline-content.hover-effect {
+    animation: cardGlow 3s infinite alternate;
+}
+
+/* Estilo para bolinhas ativas removido */
+
+.timeline-container.active .timeline-number {
+    color: rgba(230, 57, 70, 0.8);
+    font-size: 3rem;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.2;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .timeline::after {
+        left: 31px;
+    }
+
+    .timeline-container {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+    }
+
+    .timeline-container.left {
+        left: 0;
+        padding-right: 25px;
+    }
+
+    .timeline-container.right {
+        left: 0;
+        padding-left: 70px;
+    }    /* Seletor de bolinhas removido da versão responsiva */
+
+    .timeline-container.right .timeline-content {
+        border-right: 0;
+        border-left: 4px solid #E63946;
+    }
+
+    .timeline-loading-line {
+        left: 31px;
+    }
+}
+
+/* Estilos para as partículas da linha da timeline */
+.timeline-particle {
+    will-change: transform, opacity;
+    filter: blur(0.5px);
+}
+
+/* Melhorias para destaque dos elementos ativos */
+.timeline-content {
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, box-shadow;
+}
+
+/* Estilo base para todos os cards - com efeito 3D aprimorado */
+.timeline-container .timeline-content {
+    transform-origin: center;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Efeito hover manual (quando o usuário passa o mouse) */
+.timeline-container.left:hover .timeline-content {
+    transform: perspective(1000px) rotateY(7deg) translateZ(40px);
+    box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-container.right:hover .timeline-content {
+    transform: perspective(1000px) rotateY(-7deg) translateZ(40px);
+    box-shadow: -15px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Efeito hover automático (ativado pelo scroll) */
+.timeline-container.left .timeline-content.hover-effect {
+    transform: perspective(1000px) rotateY(7deg) translateZ(40px);
+    box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-container.right .timeline-content.hover-effect {
+    transform: perspective(1000px) rotateY(-7deg) translateZ(40px);
+    box-shadow: -15px 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Melhorar a transição entre os estados normal e hover */
+.timeline-content {
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}

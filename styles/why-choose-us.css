@@ -1,0 +1,149 @@
+/* Estilos da seção Por que nos escolher */
+.why-choose-us {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+    position: relative;
+}
+
+.why-choose-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #E63946, #121212);
+}
+
+.why-choose-us .section-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.why-choose-us .section-title span {
+    color: #E63946;
+}
+
+.why-choose-us .section-description {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #666;
+}
+
+/* Grid para os cards em layout 3x2 */
+.feature-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 30px;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.feature-card {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 30px 25px;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-bottom: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    /* Preparação para o efeito parallax */
+    transform: translateX(50px); /* Posição inicial mais sutil */
+    opacity: 1; /* Sempre visível */
+    will-change: transform; /* Otimiza o desempenho das animações */
+}
+
+/* O hover agora é gerenciado pelo JavaScript para coordenar com o parallax */
+.feature-card:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #E63946;
+}
+
+.feature-card:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(230, 57, 70, 0.04);
+    transition: height 0.5s ease;
+    z-index: 0;
+}
+
+.feature-card:hover:before {
+    height: 100%;
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: #E63946;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #121212;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsividade */
+@media (max-width: 991px) {
+    .why-choose-us {
+        padding: 60px 0;
+    }
+    
+    .why-choose-us .section-title {
+        font-size: 3rem;
+    }
+    
+    .feature-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .why-choose-us {
+        padding: 50px 0;
+    }
+    
+    .why-choose-us .section-title {
+        font-size: 2.5rem;
+    }
+    
+    .feature-cards-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, auto);
+    }
+    
+    .feature-card {
+        margin-bottom: 20px;
+    }
+}
