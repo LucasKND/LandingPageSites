@@ -9,8 +9,36 @@ document.addEventListener('DOMContentLoaded', function() {
     // Armazena os ouvintes de eventos para remover depois
     const hoverListeners = {};
     
+    // Função para verificar se a tela é desktop
+    function isDesktop() {
+        return window.innerWidth > 992; // Apenas para desktop (não tablets e mobile)
+    }
+    
+    // Função para resetar estilos em dispositivos móveis/tablets
+    function resetMobileStyles() {
+        if (!isDesktop()) {
+            featureCards.forEach((card, index) => {
+                // Remove manipuladores de eventos hover
+                if (hoverListeners[index]) {
+                    card.removeEventListener('mouseenter', hoverListeners[index].enter);
+                    card.removeEventListener('mouseleave', hoverListeners[index].leave);
+                }
+                
+                // Reseta o estilo para posição normal, sem efeito parallax
+                card.style.transform = 'translateX(0)';
+                card.style.opacity = 1;
+            });
+        }
+    }
+    
     // Cria o efeito parallax
     function horizontalParallax() {
+        // Não aplica parallax em dispositivos móveis e tablets
+        if (!isDesktop()) {
+            resetMobileStyles();
+            return;
+        }
+        
         // Verifica se a seção está visível na tela
         const sectionTop = whyChooseUsSection.getBoundingClientRect().top;
         const sectionBottom = whyChooseUsSection.getBoundingClientRect().bottom;
@@ -98,5 +126,8 @@ document.addEventListener('DOMContentLoaded', function() {
     horizontalParallax();
     
     // Também executa quando a janela é redimensionada
-    window.addEventListener('resize', throttle(horizontalParallax, 100));
+    window.addEventListener('resize', throttle(() => {
+        horizontalParallax();
+        resetMobileStyles(); // Verifica e aplica estilos móveis quando redimensionar
+    }, 100));
 });

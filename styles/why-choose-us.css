@@ -58,9 +58,9 @@
     border-bottom: 3px solid transparent;
     position: relative;
     overflow: hidden;
-    /* Preparação para o efeito parallax */
-    transform: translateX(50px); /* Posição inicial mais sutil */
-    opacity: 1; /* Sempre visível */
+    /* Posição normal para dispositivos móveis/tablets */
+    transform: translateX(0);
+    opacity: 1;
     will-change: transform; /* Otimiza o desempenho das animações */
 }
 
@@ -127,6 +127,16 @@
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);
     }
+    
+    /* Desativa o efeito parallax e ajusta o comportamento para tablets */
+    .feature-card {
+        transform: translateX(0) !important; /* Força sem deslocamento horizontal */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .feature-card:hover {
+        transform: translateY(-5px) !important;
+    }
 }
 
 @media (max-width: 767px) {
@@ -145,5 +155,6 @@
     
     .feature-card {
         margin-bottom: 20px;
+        transform: translateX(0) !important;
     }
 }

@@ -34,6 +34,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 icon.classList.remove('fa-times');
                 icon.classList.add('fa-bars');
             }
+            
+            // Remover classe active de todos os links
+            navLinks.forEach(item => item.classList.remove('active'));
+            // Adicionar classe active ao link clicado
+            this.classList.add('active');
         });
     });
     
@@ -45,5 +50,48 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             navbar.classList.remove('scrolled');
         }
+        
+        // Destaca a seção atual no menu
+        highlightCurrentSection();
     });
+    
+    // Função para destacar a seção atual durante a rolagem
+    function highlightCurrentSection() {
+        // Seções que queremos monitorar
+        const sections = [
+            document.querySelector('section.hero'),
+            document.querySelector('#portfolio'),
+            document.querySelector('#why-choose-us'),
+            document.querySelector('#development-process'),
+            document.querySelector('#contato')
+        ];
+        
+        // Obter posição de rolagem atual
+        const scrollPosition = window.scrollY + 150; // Adicionando offset para melhor UX
+        
+        // Verificar qual seção está visível
+        sections.forEach((section, index) => {
+            if (!section) return;
+            
+            const sectionTop = section.offsetTop;
+            const sectionBottom = sectionTop + section.offsetHeight;
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                // Remover classe active de todos os links
+                navLinks.forEach(link => link.classList.remove('active'));
+                
+                // Adicionar classe active ao link correspondente
+                // Índice 0 é a seção hero (início)
+                if (index === 0) {
+                    navLinks[0].classList.add('active');
+                } else {
+                    // Os outros índices correspondem às outras seções
+                    navLinks[index].classList.add('active');
+                }
+            }
+        });
+    }
+    
+    // Inicializar o destaque de seção ao carregar a página
+    highlightCurrentSection();
 });

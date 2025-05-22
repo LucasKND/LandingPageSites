@@ -1,0 +1,181 @@
+/* Estilos para o CTA dentro da seção de portfolio */
+.portfolio .container .cta-card {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.cta-card {
+    background: linear-gradient(135deg, #121212 0%, #333333 100%);
+    border-radius: 12px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 1;
+    border-left: 5px solid #E63946;
+    overflow: hidden;
+    margin-top: 2.5rem;
+}
+
+.cta-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(230, 57, 70, 0.05);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Elemento decorativo do ícone */
+.icon-decoration {
+    position: absolute;
+    top: -25px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    background-color: #E63946;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+}
+
+/* Estilo para as features do CTA */
+.cta-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.cta-features span {
+    background-color: rgba(230, 57, 70, 0.2);
+    padding: 5px 12px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.cta-features span i {
+    color: #E63946;
+    margin-right: 5px;
+}
+
+.cta-urgent {
+    font-weight: 600;
+    color: #E63946;
+    font-size: 1.1rem;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.cta-title span {
+    color: #E63946;
+}
+
+.cta-description {
+    font-size: 1.1rem;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.btn-cta {
+    background-color: #E63946;
+    color: #ffffff;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-cta:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+    z-index: 0;
+}
+
+.btn-cta:hover {
+    background-color: #d42d3a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+}
+
+.btn-cta:hover:before {
+    left: 100%;
+}
+
+.btn-cta i {
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+/* Responsividade */
+@media (max-width: 991px) {
+    .cta-card {
+        padding: 30px;
+        margin-top: 3rem;
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+    
+    .cta-description {
+        font-size: 1rem;
+    }
+    
+    .icon-decoration {
+        right: 30px;
+    }
+    
+    .cta-features {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    .cta-card {
+        padding: 25px;
+        text-align: center;
+        margin-top: 2.5rem;
+    }
+    
+    .btn-cta {
+        margin-top: 15px;
+        padding: 10px 25px;
+    }
+    
+    .icon-decoration {
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+    }
+    
+    .cta-features {
+        justify-content: center;
+    }
+}

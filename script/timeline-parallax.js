@@ -136,13 +136,12 @@ document.addEventListener('DOMContentLoaded', function() {
             container.style.animation = `floating ${duration}s ease-in-out ${delay}s infinite alternate`;
         });
     }
-    
-    // Adicionar animação de flutuação ao CSS
+      // Adicionar animação de flutuação ao CSS - mais sutil para não interferir com o efeito 3D de hover
     const style = document.createElement('style');
     style.textContent = `
         @keyframes floating {
             0% { transform: translateY(0px); }
-            100% { transform: translateY(-5px); }
+            100% { transform: translateY(-3px); }
         }
     `;
     document.head.appendChild(style);

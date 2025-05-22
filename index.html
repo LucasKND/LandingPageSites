@@ -5,12 +5,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">    <link rel="stylesheet" href="styles/nav-hero.css">
     <link rel="stylesheet" href="styles/portfolio.css">
+    <link rel="stylesheet" href="styles/portfolio-cta.css">
     <link rel="stylesheet" href="styles/why-choose-us.css">
     <link rel="stylesheet" href="styles/development-process.css">
     <link rel="stylesheet" href="styles/cta-section.css">
     <link rel="stylesheet" href="styles/contact-section.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/override.css">
+    <link rel="stylesheet" href="styles/footer.css">    <link rel="stylesheet" href="styles/override.css">
+    <link rel="stylesheet" href="styles/device-fixes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -18,12 +19,11 @@
         <div class="container">
             <div class="logo">
                 <a href="#"><img src="assets/Logotipo-branco.png" alt="WebCreative"></a>
-            </div>
-            <nav>                <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
+            </div>            <nav>                <ul>
+                    <li><a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Início</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#why-choose-us">Por que nos escolher</a></li>
+                    <li><a href="#development-process">Processo</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
             </nav>
@@ -37,9 +37,9 @@
             <div class="hero-content">                <div class="hero-text">
                     <h1><span id="typing-text">Seu site</span> que <span>converte</span> de xxxxx por apenas xxxxx</h1>
                     <p> <strong>Garanta agora</strong> sua presença digital e <strong>transforme seu negócio</strong> em um case de sucesso! Com designs modernos, velocidade otimizada e experiências perfeitas em todos os dispositivos, entregamos mais do que sites - entregamos <strong>resultados</strong>.</p>                    <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary" style="border: none !important; outline: none !important; box-shadow: none !important;">Garantir meu resultado</a>
-                        <a href="#" class="btn btn-secondary">Ver portfolio</a>                    </div>                </div>                <div class="hero-image">
-                    <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" alt="Ilustração de design de website" class="img-fluid">
+                        <a href="https://api.whatsapp.com/send?phone=5524992028552&text=Gostaria%20de%20saber%20mais%20sobre%20a%202GO%20Marketing!" class="btn btn-primary" target="_blank" style="border: none !important; outline: none !important; box-shadow: none !important;">Garantir meu resultado</a>
+                        <a href="#portfolio" class="btn btn-secondary">Ver portfólio</a>                    </div></div>                <div class="hero-image">
+                    <img src="assets/2GO HEADER notebook.png" alt="2GO Marketing - Versão Desktop" class="img-fluid notebook-hero-image">
                 </div>
             </div>        </div>
     </section>
@@ -54,51 +54,53 @@
                 </div>
             </div>
             
-            <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                </div>
-                <div class="carousel-inner">
+            <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="2GO Marketing"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1" aria-label="Bella Foto"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Capilar"></button>
+                    <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="3" aria-label="Lake"></button>
+                </div><div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="portfolio-card">
-                            <img src="https://images.unsplash.com/photo-1541462608143-67571c6738dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" class="d-block w-100" alt="Site de Restaurante">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>Site de Restaurante</h3>
-                                <p>Landing page responsiva com sistema de reservas online</p>
-                                <a href="#" class="btn btn-outline-light">Ver Detalhes</a>
+                            <div class="device-showcase">
+                                <div class="device notebook">
+                                    <img src="assets/2GO HEADER notebook.png" alt="2GO Marketing - Versão Desktop">
+                                </div>                                <div class="device mobile">
+                                    <img src="assets/2GO HEADER celular.png" alt="2GO Marketing - Versão Mobile" style="mix-blend-mode: multiply; background: transparent;">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="portfolio-card">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" class="d-block w-100" alt="E-commerce de Moda">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>E-commerce de Moda</h3>
-                                <p>Loja online completa com sistema de pagamentos integrado</p>
-                                <a href="#" class="btn btn-outline-light">Ver Detalhes</a>
+                            <div class="device-showcase">
+                                <div class="device notebook">
+                                    <img src="assets/BELLA FOTO notebook.png" alt="Bella Foto - Versão Desktop">
+                                </div>                                <div class="device mobile">
+                                    <img src="assets/bellafoto celular.png" alt="Bella Foto - Versão Mobile" style="mix-blend-mode: multiply; background: transparent;">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="portfolio-card">
-                            <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" class="d-block w-100" alt="Blog Corporativo">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>Blog Corporativo</h3>
-                                <p>Plataforma de conteúdo com painel administrativo personalizado</p>
-                                <a href="#" class="btn btn-outline-light">Ver Detalhes</a>
+                            <div class="device-showcase">
+                                <div class="device notebook">
+                                    <img src="assets/Capilar notebook.png" alt="Capilar - Versão Desktop">
+                                </div>                                <div class="device mobile">
+                                    <img src="assets/Capilar celular.png" alt="Capilar - Versão Mobile" style="mix-blend-mode: multiply; background: transparent;">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="portfolio-card">
-                            <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80" class="d-block w-100" alt="Site Institucional">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h3>Site Institucional</h3>
-                                <p>Presença online profissional para empresa de tecnologia</p>
-                                <a href="#" class="btn btn-outline-light">Ver Detalhes</a>
+                            <div class="device-showcase">
+                                <div class="device notebook">
+                                    <img src="assets/LAKE notebook.png" alt="Lake - Versão Desktop">
+                                </div>                                <div class="device mobile">
+                                    <img src="assets/LAKE celular.png" alt="Lake - Versão Mobile" style="mix-blend-mode: multiply; background: transparent;">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -110,9 +112,34 @@
                 <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
-                </button>
+                </button>            </div>
+
+            <!-- CTA dentro da seção portfolio -->
+            <div class="container mt-5">
+                <div class="cta-card">
+                    
+                    <div class="row align-items-center">
+                        <div class="col-lg-7 mb-4 mb-lg-0">
+                            <h2 class="cta-title">Pronto para <span>transformar</span> sua presença digital?</h2>
+                            <p class="cta-description">Garanta um site que converte visitantes em clientes. Nossa equipe está pronta para transformar suas ideias em resultados.</p>
+                            <div class="cta-features mt-3">
+                                <span><i class="fas fa-check-circle"></i> Design profissional</span>
+                                <span><i class="fas fa-check-circle"></i> Responsivo</span>
+                                <span><i class="fas fa-check-circle"></i> Otimizado para SEO</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 text-center text-lg-end">
+                            <p class="cta-urgent mb-2"></p>
+                            <a href="https://api.whatsapp.com/send?phone=5524992028552&text=Gostaria%20de%20saber%20mais%20sobre%20a%20criação%20de%20sites%20da%202GO%20Marketing!" class="btn btn-cta btn-lg" target="_blank">
+                                <i class="fab fa-whatsapp me-2"></i> Fale com um especialista
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>    </section>
+        </div>    
+    </section>
+
       <!-- Por que nos escolher Section -->
     <section id="why-choose-us" class="why-choose-us py-5">
         <div class="container">
@@ -286,9 +313,8 @@
                       
                     
                     <p class="cta-offer"><strong>Oferta exclusiva:</strong> <span style="color:#ffc107;">30% de desconto</span> para os próximos 5 clientes.</p>
-                    
-                    <div class="cta-buttons">
-                        <a href="#" class="btn btn-primary cta-main-btn">QUERO MEU SITE COM DESCONTO</a>
+                      <div class="cta-buttons">
+                        <a href="https://api.whatsapp.com/send?phone=5524992028552&text=Gostaria%20de%20saber%20mais%20sobre%20a%202GO%20Marketing%20e%20aproveitar%20o%20desconto!" class="btn btn-primary cta-main-btn" target="_blank">QUERO MEU SITE COM DESCONTO</a>
                        
                     </div>
                 </div>
@@ -310,12 +336,11 @@
                     <div class="contact-info-card">
                         <h3>Informações de Contato</h3>
                         <p>Preencha o formulário e entraremos em contato o mais breve possível, ou utilize um dos nossos canais de atendimento direto:</p>
-                        
-                        <div class="contact-item">
+                          <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="contact-text">
                                 <h4>Endereço</h4>
-                                <p>Rua Escoteiro Iter de Souza, 131, Parque Ipiranga, Resende-RJ, 27516-160</p>
+                                <p>Av. Antônio Marins, 261 - Loja 1 - Mirante das Agulhas<br>(Em frente ao lago do Mirante)</p>
                             </div>
                         </div>
                         
@@ -334,12 +359,11 @@
                                 <p>atendimento@2go.marketing</p>
                             </div>
                         </div>
-                        
-                        <div class="social-links-contact">
-                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                          <div class="social-links-contact">
+                            <a href="https://www.facebook.com/2gomkt/" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/2gomkt/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/2gomarketing/?originalSubdomain=br" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://api.whatsapp.com/send?phone=5524992028552&text=Gostaria%20de%20saber%20mais%20sobre%20a%202GO%20Marketing!" target="_blank" class="social-link"><i class="fab fa-whatsapp"></i></a>
                         </div>
                     </div>
                 </div>
@@ -391,10 +415,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>    <script src="script/nav.js"></script>
     <script src="script/portfolio.js"></script>
     <script src="script/typing-effect.js"></script>
-    <script src="script/parallax-effect.js"></script>
-    <script src="script/timeline-parallax.js"></script>
+    <script src="script/parallax-effect.js"></script>    <script src="script/timeline-parallax.js"></script>
     <script src="script/cta-section.js"></script>      <!-- Botão WhatsApp Flutuante -->
-    <a href="https://wa.me/552499202855?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20de%20criação%20de%20sites." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <a href="https://api.whatsapp.com/send?phone=5524992028552&text=Gostaria%20de%20saber%20mais%20sobre%20a%202GO%20Marketing!" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>
         <span class="whatsapp-text">Fale conosco</span>
     </a>
@@ -403,8 +426,10 @@
     <footer class="site-footer">
         <div class="container">
             <div class="row">                <div class="col-md-4">
-                    <h4>2GO Marketing</h4>
-                    <p>Soluções digitais que transformam sua presença online e impulsionam o seu negócio no mundo digital.</p>
+                    <div class="footer-logo">
+                        <img src="assets/Logotipo-branco.png" alt="2GO Marketing">
+                    </div>
+                    <p>"A meta é ser melhor que ontem"</p>
                 </div><div class="col-md-4">
                     <h4>Links Rápidos</h4>
                     <ul class="footer-links">
@@ -413,18 +438,15 @@
                         <li><a href="#development-process">Processo de desenvolvimento</a></li>
                         <li><a href="#contato">Contato</a></li>
                     </ul>
-                </div>                <div class="col-md-4">
-                    <h4>Contato</h4>
-                    <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Rua Escoteiro Iter de Souza, 131, Parque Ipiranga, Resende-RJ, 27516-160</li>
-                        <li><i class="fas fa-phone"></i> (24) 99202-8552</li>
+                </div>                <div class="col-md-4">                    <h4>Contato</h4>
+                    <ul class="contact-info">                        <li><i class="fas fa-map-marker-alt"></i> Av. Antônio Marins, 261 - Loja 1 - Mirante das Agulhas (Em frente ao lago do Mirante)</li>
+                        <li><i class="fas fa-phone"></i> <a href="https://api.whatsapp.com/send?phone=5524992028552&text=Gostaria%20de%20saber%20mais%20sobre%20a%202GO%20Marketing!" target="_blank">(24) 99202-8552</a></li>
                         <li><i class="fas fa-envelope"></i> atendimento@2go.marketing</li>
-                    </ul>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </ul>                    <div class="social-links">
+                        <a href="https://www.facebook.com/2gomkt/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/2gomkt/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/2gomarketing/?originalSubdomain=br" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=5524992028552&text=Gostaria%20de%20saber%20mais%20sobre%20a%202GO%20Marketing!" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>

@@ -13,3 +13,29 @@
     -webkit-appearance: none !important;
     border: none !important;
 }
+
+/* Sobrescrever qualquer estilo do Bootstrap relacionado ao carrossel de portfólio */
+#portfolioCarousel,
+#portfolioCarousel .carousel-inner,
+#portfolioCarousel .carousel-item,
+#portfolioCarousel .portfolio-card,
+#portfolioCarousel .device-showcase,
+#portfolioCarousel .device {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Regras específicas para imagens de celular - remover fundo cinza */
+#portfolioCarousel .device.mobile img {
+    mix-blend-mode: multiply !important;
+    background-color: transparent !important;
+}
+
+/* Compatibilidade com Safari e outros navegadores */
+@supports (-webkit-backdrop-filter: none) {
+    #portfolioCarousel .device.mobile img {
+        -webkit-mix-blend-mode: multiply !important;
+        isolation: isolate;
+    }
+}

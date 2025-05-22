@@ -141,18 +141,24 @@ nav ul li a.active::after {
 .hero-content {
     display: flex;
     align-items: center;
-    gap: 40px;
-    position: relative;    width: 100%;
+    gap: 0;
+    position: relative;    
+    width: 100%;
+    justify-content: space-between;
 }
 
 .hero-text {
     flex: 1;
-    max-width: 100%; /* Permite ocupar toda a largura quando a imagem estiver ausente */
-    margin: 0 auto; /* Centraliza o conteúdo */
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .hero-image {
     flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: -15px;
 }
 
 .hero-text h1 {
@@ -189,8 +195,46 @@ nav ul li a.active::after {
     outline: 1px solid #E63946;
 }
 
+.mobile-hero-image {
+    width: auto !important;
+    max-width: 550px !important;
+    height: auto;
+    max-height: calc(100vh - 100px);
+    object-fit: contain;
+    transform: perspective(1200px) rotateY(-8deg);
+    mix-blend-mode: multiply;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+    filter: contrast(1.05) brightness(1.02);
+}
+
+.notebook-hero-image {
+    width: auto !important;
+    max-width: 650px !important;
+    height: auto;
+    max-height: calc(100vh - 100px);
+    object-fit: contain;
+    transform: perspective(1200px) rotateY(-8deg) translateX(15px); /* Deslocamento leve para a direita */
+    mix-blend-mode: multiply;
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    outline: none !important;
+    filter: contrast(1.05) brightness(1.02);
+}
+
 .hero-image img:hover {
     transform: translateY(-10px);
+}
+
+.mobile-hero-image:hover {
+    transform: perspective(800px) rotateY(-2deg) translateY(-10px);
+}
+
+.notebook-hero-image:hover {
+    transform: perspective(800px) rotateY(-2deg) translateY(-10px) translateX(15px);
 }
 
 /* Botões */
@@ -327,6 +371,19 @@ nav ul li a.active::after {
     .hero-text, .hero-image {
         flex: auto;
         width: 100%;
+    }
+    
+    .hero-image {
+        margin-right: 0; /* Remover o deslocamento à direita em telas pequenas */
+        justify-content: center; /* Centralizar a imagem em telas pequenas */
+    }
+    
+    .notebook-hero-image {
+        transform: perspective(1200px) rotateY(-8deg) translateX(0); /* Remover o deslocamento lateral em telas pequenas */
+    }
+    
+    .notebook-hero-image:hover {
+        transform: perspective(800px) rotateY(-2deg) translateY(-10px) translateX(0);
     }
     
     .hero-text h1 {

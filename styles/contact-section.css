@@ -1,4 +1,3 @@
-
 /* Estilos para a seção de contato */
 .contact-section {
     background-color: #f8f9fa;
@@ -140,6 +139,12 @@ select.form-control {
     color: #b3b3b3;
     margin-bottom: 0;
     font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Estilos adicionais para o endereço */
+.contact-item .contact-text p br {
+    margin-top: 3px;
 }
 
 /* Links sociais */
