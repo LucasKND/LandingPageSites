@@ -183,6 +183,22 @@ nav ul li a.active::after {
     max-width: 600px;
 }
 
+.payment-info {
+    font-size: 1.1rem;
+    color: #121212;
+    margin-bottom: 25px;
+    background-color: rgba(230, 57, 70, 0.08);
+    padding: 10px 15px;
+    border-radius: 6px;
+    display: inline-block;
+    border-left: 4px solid #E63946;
+}
+
+.payment-info i {
+    color: #E63946;
+    margin-right: 5px;
+}
+
 .hero-image img {
     width: 100%;
     height: auto;

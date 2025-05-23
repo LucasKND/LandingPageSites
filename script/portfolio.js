@@ -32,5 +32,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 activeItem.classList.add('animated', 'fadeIn');
             }
         });
+        
+        // Garantir que os botões de controle funcionem corretamente em dispositivos móveis
+        const prevButton = carrossel.querySelector('.carousel-control-prev');
+        const nextButton = carrossel.querySelector('.carousel-control-next');
+        
+        // Adicionar tratamento de toque para dispositivos móveis
+        if (prevButton && nextButton) {
+            prevButton.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                portfolioCarousel.prev();
+            });
+            
+            nextButton.addEventListener('touchend', function(e) {
+                e.preventDefault();
+                portfolioCarousel.next();
+            });
+        }
     }
 });

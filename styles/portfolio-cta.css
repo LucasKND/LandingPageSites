@@ -121,10 +121,15 @@
     background-color: #d42d3a;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(230, 57, 70, 0.4);
+    color: #ffffff; /* Garantindo que o texto permaneça branco no hover */
 }
 
 .btn-cta:hover:before {
     left: 100%;
+}
+
+.btn-cta:hover i {
+    color: #ffffff; /* Garantindo que o ícone permaneça branco no hover */
 }
 
 .btn-cta i {

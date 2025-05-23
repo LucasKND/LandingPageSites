@@ -113,6 +113,11 @@
     background-color: #ff4f5e;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(230, 57, 70, 0.6);
+    color: #ffffff; /* Garantindo que o texto permaneça branco no hover */
+}
+
+.cta-main-btn:hover i {
+    color: #ffffff; /* Garantindo que o ícone permaneça branco no hover */
 }
 
 .cta-secondary-btn {

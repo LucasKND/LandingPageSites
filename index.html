@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" style="max-width: 100%; overflow-x: hidden;">
 <head>    <meta charset="UTF-8">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criação de Sites Profissionais</title>    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,9 +13,16 @@
     <link rel="stylesheet" href="styles/footer.css">    <link rel="stylesheet" href="styles/override.css">
     <link rel="stylesheet" href="styles/device-fixes.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Prevenção de rolagem horizontal */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+        }
+    </style>
 </head>
-<body>
-    <!-- Navbar -->    <header class="navbar">
+<body style="max-width: 100%; overflow-x: hidden;"></body>
+      <header class="navbar">
         <div class="container">
             <div class="logo">
                 <a href="#"><img src="assets/Logotipo-branco.png" alt="WebCreative"></a>
@@ -35,18 +42,17 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">                <div class="hero-text">
-                    <h1><span id="typing-text">Seu site</span> que <span>converte</span> de xxxxx por apenas xxxxx</h1>
-                    <p> <strong>Garanta agora</strong> sua presença digital e <strong>transforme seu negócio</strong> em um case de sucesso! Com designs modernos, velocidade otimizada e experiências perfeitas em todos os dispositivos, entregamos mais do que sites - entregamos <strong>resultados</strong>.</p>                    <div class="cta-buttons">
+                    <h1><span id="typing-text">Seu site</span> que <span>converte</span> de <span style="white-space:nowrap;">R$ 3.600</span> por apenas <span style="white-space:nowrap; color:#ffc107;">R$ 1.900</span></h1>
+                    <p> <strong>Garanta agora</strong> sua presença digital e <strong>transforme seu negócio</strong> em um case de sucesso! Com designs modernos, velocidade otimizada e experiências perfeitas em todos os dispositivos, entregamos mais do que sites - entregamos <strong>resultados</strong>.</p>
+                    <p class="payment-info"><i class="fas fa-wallet me-1"></i> <strong>Pagamento facilitado:</strong> via Pix ou à vista com <span style="color:#ffc107;">desconto especial</span>!</p>                    <div class="cta-buttons">
                         <a href="https://api.whatsapp.com/send?phone=5524992028552&text=Gostaria%20de%20saber%20mais%20sobre%20a%202GO%20Marketing!" class="btn btn-primary" target="_blank" style="border: none !important; outline: none !important; box-shadow: none !important;">Garantir meu resultado</a>
                         <a href="#portfolio" class="btn btn-secondary">Ver portfólio</a>                    </div></div>                <div class="hero-image">
                     <img src="assets/2GO HEADER notebook.png" alt="2GO Marketing - Versão Desktop" class="img-fluid notebook-hero-image">
                 </div>
             </div>        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container py-5">
+    </section>    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio" style="overflow: hidden;">
+        <div class="container py-5" style="overflow: visible;">
             <div class="row mb-5">
                 <div class="col-12 text-center">
                     <h2 class="section-title">Nosso <span>Portfólio</span></h2>
@@ -60,59 +66,54 @@
                     <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2" aria-label="Capilar"></button>
                     <button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="3" aria-label="Lake"></button>
                 </div><div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <div class="portfolio-card">
+                    <div class="carousel-item active">                        <div class="portfolio-card">
                             <div class="device-showcase">
-                                <div class="device notebook">
-                                    <img src="assets/2GO HEADER notebook.png" alt="2GO Marketing - Versão Desktop">
-                                </div>                                <div class="device mobile">
+                                <div class="device mobile">
                                     <img src="assets/2GO HEADER celular.png" alt="2GO Marketing - Versão Mobile" style="mix-blend-mode: multiply; background: transparent;">
+                                </div>                                <div class="device notebook">
+                                    <img src="assets/2GO HEADER notebook.png" alt="2GO Marketing - Versão Desktop">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="portfolio-card">
+                    <div class="carousel-item">                        <div class="portfolio-card">
                             <div class="device-showcase">
-                                <div class="device notebook">
-                                    <img src="assets/BELLA FOTO notebook.png" alt="Bella Foto - Versão Desktop">
-                                </div>                                <div class="device mobile">
+                                <div class="device mobile">
                                     <img src="assets/bellafoto celular.png" alt="Bella Foto - Versão Mobile" style="mix-blend-mode: multiply; background: transparent;">
+                                </div>                                <div class="device notebook">
+                                    <img src="assets/BELLA FOTO notebook.png" alt="Bella Foto - Versão Desktop">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="portfolio-card">
+                    <div class="carousel-item">                        <div class="portfolio-card">
                             <div class="device-showcase">
-                                <div class="device notebook">
-                                    <img src="assets/Capilar notebook.png" alt="Capilar - Versão Desktop">
-                                </div>                                <div class="device mobile">
+                                <div class="device mobile">
                                     <img src="assets/Capilar celular.png" alt="Capilar - Versão Mobile" style="mix-blend-mode: multiply; background: transparent;">
+                                </div>                                <div class="device notebook">
+                                    <img src="assets/Capilar notebook.png" alt="Capilar - Versão Desktop">
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
-                        <div class="portfolio-card">
+                    <div class="carousel-item">                        <div class="portfolio-card">
                             <div class="device-showcase">
-                                <div class="device notebook">
-                                    <img src="assets/LAKE notebook.png" alt="Lake - Versão Desktop">
-                                </div>                                <div class="device mobile">
+                                <div class="device mobile">
                                     <img src="assets/LAKE celular.png" alt="Lake - Versão Mobile" style="mix-blend-mode: multiply; background: transparent;">
+                                </div>                                <div class="device notebook">
+                                    <img src="assets/LAKE notebook.png" alt="Lake - Versão Desktop">
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+                </div>                <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
-                </button>            </div>
+                </button></div>
 
             <!-- CTA dentro da seção portfolio -->
             <div class="container mt-5">
@@ -120,8 +121,8 @@
                     
                     <div class="row align-items-center">
                         <div class="col-lg-7 mb-4 mb-lg-0">
-                            <h2 class="cta-title">Pronto para <span>transformar</span> sua presença digital?</h2>
-                            <p class="cta-description">Garanta um site que converte visitantes em clientes. Nossa equipe está pronta para transformar suas ideias em resultados.</p>
+                            <h2 class="cta-title">Chegou a hora de <span>dominar</span> o digital!</h2>
+                            <p class="cta-description">Foque no seu negócio e deixe o digital com a gente. Cuidamos de tudo para você conquistar resultados online!</p>
                             <div class="cta-features mt-3">
                                 <span><i class="fas fa-check-circle"></i> Design profissional</span>
                                 <span><i class="fas fa-check-circle"></i> Responsivo</span>
