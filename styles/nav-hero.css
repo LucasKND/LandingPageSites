@@ -365,6 +365,16 @@ nav ul li a.active::after {
     nav ul li a {
         display: block;
         padding: 8px 0;
+        color: #E63946; /* Alteração: texto em vermelho no menu mobile */
+    }
+    
+    nav ul li a:hover,
+    nav ul li a.active {
+        color: #121212; /* Alteração: cor de hover/active diferente no mobile */
+    }
+    
+    nav ul li a.active::after {
+        background-color: #121212; /* Alteração: cor da linha de active no mobile */
     }
     
     .menu-toggle {
