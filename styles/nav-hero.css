@@ -130,12 +130,14 @@ nav ul li a.active::after {
 
 /* Estilos do Hero */
 .hero {
-    height: calc(100vh - 70px);
+    height: auto; /* Alterado de calc(100vh - 70px) para auto */
+    min-height: calc(100vh - 70px); /* Adicionado min-height para manter o tamanho mínimo */
     background: #f8f9fa;
     position: relative;
     display: flex;
     align-items: center;
     overflow: visible;
+    padding: 40px 0; /* Adicionado padding para controlar melhor o espaçamento */
 }
 
 .hero-content {
@@ -165,7 +167,7 @@ nav ul li a.active::after {
     font-size: 4.2rem;
     font-weight: 700;
     color: #121212;
-    margin-bottom: 20px;
+    margin-bottom: 12px; /* Reduzido de 20px para 12px */
     line-height: 1.1;
     letter-spacing: 1.5px;
 }
@@ -177,20 +179,39 @@ nav ul li a.active::after {
 .hero-text p {
     font-size: 1.2rem;
     color: #121212;
-    margin-bottom: 25px;
+    margin-bottom: 15px; /* Reduzido de 25px para 15px */
     border-left: 4px solid #E63946;
     padding-left: 20px;
     max-width: 600px;
 }
 
+/* Remove the red border for paragraphs with no-border class */
+.hero-text p.no-border {
+    border-left: none;
+    padding-left: 0;
+}
+
 .payment-info {
     font-size: 1.1rem;
     color: #121212;
-    margin-bottom: 25px;
+    margin-bottom: 15px; /* Reduzido de 25px para 15px */
     background-color: rgba(230, 57, 70, 0.08);
-    padding: 10px 15px;
+    padding: 8px 12px; /* Reduzido de 10px 15px para 8px 12px */
     border-radius: 6px;
     display: inline-block;
+}
+
+.special-condition-info {
+    font-size: 1.1rem;
+    color: #121212;
+    margin-bottom: 20px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 6px;
+    background-color: rgba(230, 57, 70, 0.08);
+    border-left: 4px solid #E63946;
+    max-width: 600px;
+}
     border-left: 4px solid #E63946;
 }
 
@@ -482,12 +503,115 @@ nav ul li a.active::after {
         right: 20px;
         padding: 10px;
     }
-    
-    .whatsapp-text {
+      .whatsapp-text {
         display: none;
     }
     
     .whatsapp-float i {
         margin-right: 0;
+    }
+}
+
+/* Novos estilos para a seção hero com oferta especial */
+.pricing-highlight {
+    margin: 10px 0; /* Reduzido de 20px para 10px */
+    padding: 10px; /* Reduzido de 15px para 10px */
+    background-color: rgba(230, 57, 70, 0.08);
+    border-radius: 8px;
+    border-left: 4px solid #E63946;
+    border-right: 0 !important;
+}
+
+.pricing-highlight p {
+    border: none !important;
+    border-right: 0 !important;
+    margin-bottom: 0;
+}
+
+.price-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px; /* Reduzido de 10px para 5px */
+    line-height: 1.2;
+}
+
+.old-price {
+    position: relative;
+    color: #666;
+    font-size: 0.9em;
+}
+
+.old-price s {
+    position: relative;
+}
+
+.old-price s::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -5%;
+    width: 110%;
+    height: 3px;
+    background-color: #E63946;
+    transform: rotate(-10deg);
+}
+
+.new-price {
+    font-size: 1.3em;
+    color: #ffc107;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.attention-note {
+    font-size: 1.2rem;
+    color: #E63946;
+    margin: 12px 0 8px; /* Reduzido de 20px 0 10px para 12px 0 8px */
+    padding-left: 10px;
+    border-left: 3px solid #E63946;
+}
+
+.benefits-list {
+    margin: 12px 0; /* Reduzido de 20px para 12px */
+    padding: 10px; /* Reduzido de 15px para 10px */
+    background-color: rgba(248, 249, 250, 0.7);
+    border-radius: 8px;
+}
+
+.benefits-list ul {
+    list-style: none;
+    padding-left: 10px;
+    margin-top: 5px; /* Reduzido de 10px para 5px */
+}
+
+.benefits-list ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 6px; /* Reduzido de 10px para 6px */
+}
+
+.benefits-list ul li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #E63946;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .price-title {
+        font-size: 1.8rem;
+    }
+    
+    .new-price {
+        font-size: 1.2em;
+    }
+    
+    .attention-note {
+        font-size: 1.1rem;
+    }
+    
+    .benefits-list ul li {
+        font-size: 0.95rem;
     }
 }
